@@ -2,6 +2,7 @@ import {
   StyleSheet,
   Text,
   View,
+  Image,
   SafeAreaView,
   Platform,
   TextInput,
@@ -14,7 +15,14 @@ import FoodTypes from "../components/FoodTypes";
 import QuickFood from "../components/QuickFood";
 import { Ionicons } from '@expo/vector-icons';
 import { ScrollView } from "react-native";
+import hotels from "../data/hotels";
+import MenuItem from "../components/MenuItem";
+
+
+
 const HomeScreen = () => {
+
+  const data = hotels;
   return (
     <ScrollView style={{ paddingTop: Platform.OS === "android" ? 35 : 0 }} showsVerticalScrollIndicator={false} >
       <View
@@ -51,9 +59,15 @@ const HomeScreen = () => {
 
       <Pressable style={{ marginHorizontal:10, flexDirection:'row', alignItems:'center', borderWidth:1, borderColor:'#d0d0d0', padding:10, borderRadius:20, justifyContent:'center', width:120}}>
         <Text>Sort By Price</Text>
-        
       </Pressable>
       </View>
+
+
+      {data.map((item, index)=>(
+        <MenuItem key={index} item={item}/>
+      ))}
+
+
   </ScrollView>
   );
 };
