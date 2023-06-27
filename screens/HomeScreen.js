@@ -10,9 +10,11 @@ import React from "react";
 import { Feather } from "@expo/vector-icons";
 import Carousel from "../components/Carousel";
 import FoodTypes from "../components/FoodTypes";
+import QuickFood from "../components/QuickFood";
+import { ScrollView } from "react-native";
 const HomeScreen = () => {
   return (
-    <SafeAreaView style={{ paddingTop: Platform.OS === "android" ? 35 : 0 }}>
+    <ScrollView style={{ paddingTop: Platform.OS === "android" ? 35 : 0 }} showsVerticalScrollIndicator={false} >
       <View
         style={{
           flexDirection: "row",
@@ -33,7 +35,8 @@ const HomeScreen = () => {
       </View>
       <Carousel/>
       <FoodTypes/>
-    </SafeAreaView>
+      <QuickFood/>
+  </ScrollView>
   );
 };
 
