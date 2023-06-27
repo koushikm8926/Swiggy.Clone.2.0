@@ -10,11 +10,19 @@ const Carousel = () => {
   ];
   return (
     <View>
-      <SliderBox images={images} />
+      <SliderBox
+        images={images}
+        dotColor="#13274F"
+        autoPlay
+        circleLoop
+        inactiveDotcolor="red"
+        ImageComponentStyle={{
+          borderRadius:6,
+          width:"94%",
+        }}
+      />
     </View>
   );
 };
 
 export default Carousel;
-
-const styles = StyleSheet.create({});
