@@ -9,6 +9,7 @@ import {
 import React from "react";
 import { Feather } from "@expo/vector-icons";
 import Carousel from "../components/Carousel";
+import FoodTypes from "../components/FoodTypes";
 const HomeScreen = () => {
   return (
     <SafeAreaView style={{ paddingTop: Platform.OS === "android" ? 35 : 0 }}>
@@ -31,6 +32,7 @@ const HomeScreen = () => {
         <Feather name="search" size={24} color="#E52B50" />
       </View>
       <Carousel/>
+      <FoodTypes/>
     </SafeAreaView>
   );
 };
