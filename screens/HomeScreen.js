@@ -5,12 +5,14 @@ import {
   SafeAreaView,
   Platform,
   TextInput,
+  Pressable,
 } from "react-native";
 import React from "react";
 import { Feather } from "@expo/vector-icons";
 import Carousel from "../components/Carousel";
 import FoodTypes from "../components/FoodTypes";
 import QuickFood from "../components/QuickFood";
+import { Ionicons } from '@expo/vector-icons';
 import { ScrollView } from "react-native";
 const HomeScreen = () => {
   return (
@@ -36,6 +38,22 @@ const HomeScreen = () => {
       <Carousel/>
       <FoodTypes/>
       <QuickFood/>
+      <View style={{flexDirection:'row', alignItems:'center', justifyContent:'space-around'}}>
+      <Pressable style={{ marginHorizontal:10, flexDirection:'row', alignItems:'center', borderWidth:1, borderColor:'#d0d0d0', padding:10, borderRadius:20, justifyContent:'center',  width:120}}>
+        <Text style={{marginRight:6}}>Filter</Text>
+        <Ionicons name="filter" size={20} color="black" />
+      </Pressable>
+
+      <Pressable style={{ marginHorizontal:10, flexDirection:'row', alignItems:'center', borderWidth:1, borderColor:'#d0d0d0', padding:10, borderRadius:20, justifyContent:'center', width:120}}>
+        <Text>Sort By Value</Text>
+
+      </Pressable>
+
+      <Pressable style={{ marginHorizontal:10, flexDirection:'row', alignItems:'center', borderWidth:1, borderColor:'#d0d0d0', padding:10, borderRadius:20, justifyContent:'center', width:120}}>
+        <Text>Sort By Price</Text>
+        
+      </Pressable>
+      </View>
   </ScrollView>
   );
 };
