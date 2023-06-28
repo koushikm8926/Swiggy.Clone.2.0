@@ -14,7 +14,6 @@ export default [
         rating:3.8,
         time:"30-40",
         offer:"60%"
-
     },
     {
         id:"2",

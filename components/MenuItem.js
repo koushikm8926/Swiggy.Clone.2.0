@@ -106,4 +106,3 @@ const MenuItem = ({ item }) => {
 
 export default MenuItem;
 
-const styles = StyleSheet.create({});
