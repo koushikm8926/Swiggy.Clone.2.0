@@ -10,12 +10,24 @@ import React from "react";
 import { MaterialIcons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 const MenuItem = ({ item }) => {
   // console.log(item);
+  const navigation= useNavigation(); 
 
   return (
     <View style={{ margin: 10 }}>
-      <Pressable style={{ flexDirection: "row" }}>
+      <Pressable onPress={()=> navigation.navigate("Menue", {
+        id:item.id,
+        name:item.name,
+        image:item.image, 
+        rating:item.rating,
+        time:item.time,
+        adress:item.adress,
+        cost_for_two:item.cost_for_two,
+        cuisines:item.cuisines,
+        menu:item.menu,
+      })} style={{ flexDirection: "row" }}>
         <View>
           <ImageBackground
             source={{ uri: item.image }}
