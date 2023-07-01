@@ -6,7 +6,7 @@ import Menucomponent from './Menucomponent';
 const Fooditem = ({item}) => {
     const data=[item];
     console.log(data);
-    const [selected, setSelected]=useState([]);
+    const [selected, setSelected]=useState(["Recommended"]);
   const handleItemSelect = (item)=>{
     const itemSelected = selected.find((c)=> c===item);
     if (itemSelected){
