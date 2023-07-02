@@ -1,4 +1,4 @@
-import { Platform, StyleSheet, Text, View , SafeAreaView, ScrollView} from 'react-native'
+import { Platform, StyleSheet, Text, View , SafeAreaView, ScrollView, Pressable} from 'react-native'
 import React from 'react'
 import { useNavigation, useRoute } from '@react-navigation/native'
 import { Ionicons } from '@expo/vector-icons';
@@ -12,6 +12,7 @@ const MenueScreen = () => {
     const navigation=useNavigation();
 
   return (
+    <>
     <ScrollView style={{marginTop:Platform.OS==="android" ? 35:0,}}>
       <View style={{height:300, backgroundColor:'#B4C0DE', borderBottomRightRadius:40, borderBottomLeftRadius:40,}}>
             <View style={{flexDirection:'row', alignItems:'center', justifyContent:'space-between', margin:10,}} >
@@ -76,6 +77,14 @@ const MenueScreen = () => {
         <Fooditem item={item} key={index} />
       ))}
     </ScrollView>
+    <Pressable style={{height:60, width:60,justifyContent:'center', borderRadius:40,backgroundColor:'black', alignItems:'center', marginLeft:'auto',position:'absolute', bottom:35, right:25,alignContent:'center'}}>
+      <MaterialIcons style={{alignItems:'center', }} name="menu-book" size={23} color="white" />
+      <Text style={{textAlign:'center', color:'white', fontWeight:'500'}}>MENU</Text>
+    </Pressable>
+    
+    
+    </>
+
   )
 }
 

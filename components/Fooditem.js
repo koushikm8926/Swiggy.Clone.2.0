@@ -3,11 +3,12 @@ import React, { useState } from 'react'
 import { Pressable } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import Menucomponent from './Menucomponent';
+
 const Fooditem = ({item}) => {
     const data=[item];
     console.log(data);
     const [selected, setSelected]=useState(["Recommended"]);
-  const handleItemSelect = (item)=>{
+    const handleItemSelect = (item)=>{
     const itemSelected = selected.find((c)=> c===item);
     if (itemSelected){
       setSelected(selected.filter((sel)=> sel !==item));
@@ -39,4 +40,3 @@ const Fooditem = ({item}) => {
 
 export default Fooditem
 
-const styles = StyleSheet.create({})
